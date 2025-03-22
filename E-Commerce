@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <style>
+        body { font-family: Arial; background: #e0f7fa; margin: 0; }
+        header { background: #0097a7; color: white; text-align: center; padding: 20px; }
+        button { 
+            background: #00bcd4; 
+            color: white; 
+            border: none; 
+            padding: 20px 40px; /* Increased padding for bigger buttons */
+            cursor: pointer; 
+            font-size: 1.5em; /* Increased font size */
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button:hover { 
+            background: #00838f; 
+        }
+        .category { display: none; text-align: center; margin: 20px 0; font-size: 1.2em; }
+        .intro, .contact { text-align: center; margin: 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+
+<!-- Welcome to Our Home Page Section (First) -->
+<div id="homePage" class="intro">
+    <h2>Welcome to Our E-Commerce Store</h2>
+    <p>At our store, we offer a wide range of products to meet all your needs. Whether you're shopping for the latest electronics, fashionable clothing, or useful home goods, we have something for everyone.</p>
+    <p>Our mission is to provide high-quality products at affordable prices, backed by excellent customer service. Enjoy a seamless shopping experience!</p>
+</div>
+
+<!-- Category Buttons (Displayed after the Home Page Content) -->
+<div style="text-align: center; margin-top: 30px;">
+    <button onclick="showCategory('clothing')">Clothing</button>
+    <button onclick="showCategory('electronics')">Electronics</button>
+    <button onclick="showCategory('homeGoods')">Home Goods</button>
+</div>
+
+<!-- Category Information (No Products Listed, Just Category Names) -->
+<div id="clothing" class="category">
+    <h2>Clothing</h2>
+    <p>Explore our stylish clothing collection, including T-shirts, jeans, jackets, and more!</p>
+</div>
+
+<div id="electronics" class="category">
+    <h2>Electronics</h2>
+    <p>Browse the latest in technology with smartphones, laptops, headphones, and more!</p>
+</div>
+
+<div id="homeGoods" class="category">
+    <h2>Home Goods</h2>
+    <p>Find everything for your home, including coffee makers, blenders, and kitchen appliances!</p>
+</div>
+
+<!-- Contact Us Section (Displayed at the Bottom) -->
+<div class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+    <p>Email: support@ecommerce.com</p>
+    <p>Phone: 9234567890</p>
+    <p>Address: HB St-123, Hyderabad, India</p>
+</div>
+
+<script>
+    function showCategory(page) { 
+        document.querySelectorAll('.category').forEach(c => c.style.display = 'none'); 
+        document.getElementById(page).style.display = 'block'; 
+    }
+    showCategory('homePage'); // Default to home page
+</script>
+
+</body>
+</html>
